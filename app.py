@@ -16,4 +16,15 @@ for i in list:
         print("It took you" + " " + str(count) + " guesses!")
         break
 
-print("Good")
+    elif int(value) != x:
+        print("Wrong! Guess count:" + " " + str(count))
+        if count == 10:
+            print("GAME OVER!")
+            break
+        if abs(x - min_value) <=  abs(max_value - x):
+            max_value = max_value - i
+            value = input("Enter your guess from" + " " + str(min_value) + " " + "to" + " "  + str(max_value) + ":")
+        else:
+            min_value = min_value + i
+            value = input("Enter your guess from" + " " + str(min_value) + " " + "to" + " " + str(max_value) + ":")
+
