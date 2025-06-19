@@ -15,6 +15,7 @@ for i in list:
         print("You got it! The hidden number is " + str(value))
         print("It took you" + " " + str(count) + " guesses!")
         break
+
     elif int(value) != x:
         print("Wrong! Guess count:" + " " + str(count))
         if count == 10:
@@ -26,3 +27,4 @@ for i in list:
         else:
             min_value = min_value + i
             value = input("Enter your guess from" + " " + str(min_value) + " " + "to" + " " + str(max_value) + ":")
+
